@@ -44,7 +44,7 @@
 	   *  Usamos la anotación `@Autowired` en las propiedades que deseamos inyectar, en este caso será en el atributo sc de la clase SpellChecker, como este puede ser  de 
 	   tipo EnglishSpellChecker o SpanishSpellChecker, usamos la anotación `@Quialifier("nombreDelBean")` para especificar cual será: 
 		 
-		    ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/GRAMMAR-CHECKER/img/autowired.png) 
+		    ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/GRAMMAR-CHECKER/img/autowiredd.png) 
 	   
 	   * Salida:
 	   
@@ -73,7 +73,7 @@
 
    In this exercise we will build a class model for the logical layer of an application that allows managing the sale of cinema tickets for a prestigious company.
    
-   ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master//img/CinemaClassDiagram.png) 
+   ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA_I/img/CinemaClassDiagram.png)
    
 ### Part I
 
