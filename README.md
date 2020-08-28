@@ -65,6 +65,8 @@
    1. Modify the configuration with annotations so that the Bean 'GrammarChecker' now makes use of the SpanishSpellChecker class (so that GrammarChecker is injected with
    EnglishSpellChecker instead of SpanishSpellChecker.) Verify the new result.
    
+      ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/GRAMMAR-CHECKER/img/autowired.png) 
+   
       ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/GRAMMAR-CHECKER/img/outputspanish.png) 
    
 ## Cinema Book System
