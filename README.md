@@ -5,7 +5,7 @@
 ## Compile and Run Instructions
 
    Es necesario tener instalado [maven](https://maven.apache.org/ "maven") en el equipo que se desee correr el programa. Abra la consola y ubiquese donde desea tener este
-   proyecto, inserte el comando `git clone https://github.com/angipaola10/LAB2-ARSW` para clonar el proyecto en su computador, se creará la carpera **/LAB3-ARSW**
+   proyecto, inserte el comando `git clone https://github.com/angipaola10/LAB3-ARSW` para clonar el proyecto en su computador, se creará la carpera **/LAB3-ARSW**
 
    * **Compilar**
      
