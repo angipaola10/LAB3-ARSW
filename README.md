@@ -69,7 +69,7 @@
    
       ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/GRAMMAR-CHECKER/img/outputspanish.png) 
    
-## Cinema Book System 📚
+## Cinema Book System 🎥🍿
 
 ###  Description
 
