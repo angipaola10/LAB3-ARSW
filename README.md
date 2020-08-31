@@ -2,6 +2,34 @@
   
   📌 **Angi Paola Jiménez Pira**
   
+## Compile and Run Instructions
+
+   Es necesario tener instalado [maven](https://maven.apache.org/ "maven") en el equipo que se desee correr el programa. Abra la consola y ubiquese donde desea tener este
+   proyecto, inserte el comando `git clone https://github.com/angipaola10/LAB2-ARSW` para clonar el proyecto en su computador, se creará la carpera **/LAB3-ARSW**
+
+   * **Compilar**
+     
+       Estando en la consola, ingrese a la carpeta **/LAB3-ARSW/CINEMA** o **/LAB3-ARSW/GRAMMAR-CHECKER** y ejecute el comando `mvn package` para compilar el programa que desee.
+       
+	 * CINEMA
+       
+	     ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/GRAMMAR-CHECKER/img/compilar.png) 
+	   
+	 * GRAMMAR-CHECKER
+	   
+	     ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA/img/compilar.png) 
+
+   * **Ejecutar**
+      
+       Luego de compilar el programa, en la misma ubicación inserte el comando de ejecución:
+	
+	 * GRAMMAR-CHECKER:  `mvn exec:java -Dexec.mainClass=edu.eci.arsw.springdemo.ui.Main`
+	 
+	     ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/GRAMMAR-CHECKER/img/ejecutar.png) 
+	
+	 * CINEMA: `mvn exec:java -Dexec.mainClass=edu.eci.arsw.cinema.ui.Main`
+	 
+	     ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA/img/ejecutar.png) 
   
 ## Introduction to Spring and Configuration using annotations
   
