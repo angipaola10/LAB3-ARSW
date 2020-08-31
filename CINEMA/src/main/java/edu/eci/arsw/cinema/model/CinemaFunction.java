@@ -5,7 +5,7 @@
  */
 package edu.eci.arsw.cinema.model;
 
-import edu.eci.arsw.cinema.persistence.CinemaException;
+import edu.eci.arsw.cinema.services.CinemaException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -33,12 +33,12 @@ public class CinemaFunction {
         }
     }
     
-    public void buyTicket(int row,int col) throws CinemaException{
+    public void buyTicket(int row,int col) throws CinemaModelException{
         if (seats.get(row).get(col).equals(true)){
             seats.get(row).set(col,Boolean.FALSE);
         }
         else{
-            throw new CinemaException("Seat booked");
+            throw new CinemaModelException("Seat booked");
         }
     }
     
@@ -62,7 +62,8 @@ public class CinemaFunction {
         this.date = date;
     }
     
-    
-    
+    public String toString(){
+        return "Película: "+movie.getName()+"      Fecha: "+date;
+    }    
     
 }

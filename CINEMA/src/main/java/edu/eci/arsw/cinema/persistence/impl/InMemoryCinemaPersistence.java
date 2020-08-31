@@ -7,19 +7,26 @@ package edu.eci.arsw.cinema.persistence.impl;
 
 import edu.eci.arsw.cinema.model.Cinema;
 import edu.eci.arsw.cinema.model.CinemaFunction;
+import edu.eci.arsw.cinema.model.CinemaModelException;
 import edu.eci.arsw.cinema.model.Movie;
-import edu.eci.arsw.cinema.persistence.CinemaException;
+import edu.eci.arsw.cinema.services.CinemaException;
 import edu.eci.arsw.cinema.persistence.CinemaPersistenceException;
 import edu.eci.arsw.cinema.persistence.CinemaPersitence;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author cristian
  */
+@Service("InMemoryCinemaPersistence")
 public class InMemoryCinemaPersistence implements CinemaPersitence{
     
     private final Map<String,Cinema> cinemas=new HashMap<>();
@@ -32,18 +39,30 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
         CinemaFunction funct2 = new CinemaFunction(new Movie("The Night","Horror"),functionDate);
         functions.add(funct1);
         functions.add(funct2);
-        Cinema c=new Cinema("cinemaX",functions);
+        Cinema c = new Cinema("cinemaX",functions);
         cinemas.put("cinemaX", c);
     }    
 
     @Override
-    public void buyTicket(int row, int col, String cinema, String date, String movieName) throws CinemaException {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public void buyTicket(int row, int col, String cinema, String date, String movieName) throws CinemaPersistenceException {
+        try{ 
+            Cinema c = getCinema(cinema);
+            CinemaFunction cf = c.getFunctionByMovieAndDate(movieName, date);
+            cf.buyTicket(row, col);
+        }catch(CinemaModelException e){
+            throw new CinemaPersistenceException(e.getMessage());
+        }
     }
 
     @Override
-    public List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public List<CinemaFunction> getFunctionsbyCinemaAndDate(String cinema, String date) throws CinemaPersistenceException {
+        try {
+            Cinema c;
+            c = getCinema(cinema);
+            return c.getFunctionsByDate(date);
+        } catch (CinemaModelException | CinemaPersistenceException e) {
+            throw new CinemaPersistenceException(e.getMessage());
+        }
     }
 
     @Override
@@ -58,7 +77,16 @@ public class InMemoryCinemaPersistence implements CinemaPersitence{
 
     @Override
     public Cinema getCinema(String name) throws CinemaPersistenceException {
-        return cinemas.get(name);
+        if (cinemas.containsKey(name)){
+            return cinemas.get(name);
+        }
+        throw new CinemaPersistenceException("No exists a cinema with that name");
+    }
+    
+    @Override
+    public Set<Cinema> getAllCinemas() {
+        Set<Cinema> allCinemas = new HashSet(cinemas.values());
+        return allCinemas;
     }
 
 }

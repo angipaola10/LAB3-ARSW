@@ -5,7 +5,7 @@
   
 ## Introduction to Spring and Configuration using annotations
   
-### Part I - Basic workshop 
+### Part I - Basic workshop ⚙️
 
    To illustrate the use of the Spring framework, and the development environment for its use through Maven (and NetBeans), the configuration of a text analysis application
    will be made, which makes use of a grammar verifier that requires a spelling checker. The grammar checker will be injected, at the time of execution, with the spelling
@@ -69,13 +69,13 @@
    
       ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/GRAMMAR-CHECKER/img/outputspanish.png) 
    
-## Cinema Book System
+## Cinema Book System 📚
 
 ###  Description
 
    In this exercise we will build a class model for the logical layer of an application that allows managing the sale of cinema tickets for a prestigious company.
    
-   ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA_I/img/CinemaClassDiagram.png)
+   ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA/img/CinemaClassDiagram.png)
    
 ### Part I
 
@@ -98,6 +98,10 @@
 	
    4. Make a program in which you create (through Spring) an instance of CinemaServices, and rectify the functionality of it: register cinemas, consult cinemas, obtain the
    functions of certain cinema, buy / book tickets, etc.
+   
+        Al correr el programa de prueba se obtiene la siguiente salida: 
+	
+        ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA/img/output1.png)
   
   5. It is wanted that the consultations realize a filtering process of the films to exhibit, said filters look for to give him the facility to the user to see the 
   mostsuitable films according to his necessity. Adjust the application (adding the abstractions and implementations that you consider) so that the CinemaServices class is
@@ -111,6 +115,18 @@
    
    6. Add the corresponding tests to each of these filters, and test their operation in the test program, verifying that only by changing the position of the annotations
    -without changing anything else-, the program returns the list of films filtered in the manner (A ) or in the way (B).
+   
+        * Filtrando por género:
+	
+	      ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA/img/output2.png)
+	  
+	      ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA/img/output3.png)
+	  
+        * Filtrando por disponibilidad:
+	
+	      ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA/img/output4.png)
+	   
+	      ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA/img/output5.png)
    
 
 

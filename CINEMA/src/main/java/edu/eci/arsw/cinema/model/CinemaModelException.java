@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.arsw.cinema.persistence;
+package edu.eci.arsw.cinema.model;
 
 /**
  *
- * @author cristian
+ * @author Angi
  */
-public class CinemaException extends Exception{
+public class CinemaModelException extends Exception{
 
-    public CinemaException(String message) {
+    public CinemaModelException(String message) {
         super(message);
     }
 
-    public CinemaException(String message, Throwable cause) {
+    public CinemaModelException(String message, Throwable cause) {
         super(message, cause);
     }
     
