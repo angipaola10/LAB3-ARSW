@@ -156,5 +156,7 @@
 	   
 	      ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA/img/output5.png)
    
-
+		* Pruebas 
+		
+		  ![alt text](https://raw.githubusercontent.com/angipaola10/LAB3-ARSW/master/CINEMA/img/test.png)
 
